@@ -8,7 +8,7 @@ to_start = []
 
 instances = filter(lambda i: i['State']['Name'] == 'stopped', relay.get(D.instances))
 for instance in instances:
-    to_stop.append(instance['InstanceId'])
+    to_start.append(instance['InstanceId'])
 
 ec2 = boto3.client('ec2', region_name=region)
 
