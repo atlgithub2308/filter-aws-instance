@@ -6,7 +6,7 @@ region = 'ap-southeast-1'
 relay = Interface()
 to_start = []
 
-instances = filter(lambda i: i['State']['Name'] == 'stopped', relay.get(D.instances))
+instances = filter(lambda i: i['State']['Name'] == 'Stopped', relay.get(D.instances))
 for instance in instances:
     to_start.append(instance['InstanceId'])
 
