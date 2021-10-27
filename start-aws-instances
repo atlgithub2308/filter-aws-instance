@@ -12,7 +12,9 @@ for instance in instances:
 
 ec2 = boto3.client('ec2', region_name=region)
 
-ec2.start_instances(InstanceIds=instances)
+result = ec2.start_instances(InstanceIds=instances)
+
+print(result)
     
 print('\nFound {} instances to start:'.format(len(to_start)))
 print(*[instance_id for instance_id in to_start], sep = "\n") 
